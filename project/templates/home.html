@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+{% block title %} Nish Website{% endblock title %}
+{% block hero %}
+<section id="hero">
+    <div class="hero-container">
+      <h1>Nishchitha</h1>
+      <h2>I'm a Student at Dr. AIT</h2>
+      {% comment %} <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a> {% endcomment %}
+    </div>
+  </section>
+{% endblock hero %}
+{% block body %}
+{% for message in messages%}
+<div class="alert alert-{{message.tags }} alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endblock body%}
